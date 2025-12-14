@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Fixed viewport syntax -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Optional polish -->
+    <meta name="description" content="Expense planner page from Student Life Command Center with daily expense log, monthly summary and budget form.">
+    <title>Expenses &mdash; Student Life Command Center</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <span class="logo-main">Student Life</span>
+            <span class="logo-sub">Command Center</span>
+        </div>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="timetable.html">Timetable</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="resources.html">Resources</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="hero">
+            <h1>Expense Planner</h1>
+            <p>
+                This page is for tracking where my money goes every day. All the small chai,
+                snacks and autos add up, so I prefer to see it clearly.
+            </p>
+        </section>
+
+        <section class="page-section">
+            <h2>Daily Expense Log</h2>
+            <p class="section-note">
+                I just write every expense here with date, category and amount. I can either
+                fill it on the system or print and write.
+            </p>
+
+            <div class="table-wrapper" role="region" aria-labelledby="daily-expense-label">
+                <table class="data-table">
+                    <caption id="daily-expense-label">Daily Expense Log</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">S. No.</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Item / Description</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Amount (₹)</th>
+                            <th scope="col">Payment Mode</th>
+                            <th scope="col">Essential / Optional</th>
+                            <th scope="col">Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <h2>Monthly Budget Summary</h2>
+            <p class="section-note">
+                At the end of the month I use this summary to see which category is eating most of my budget.
+            </p>
+
+            <div class="table-wrapper" role="region" aria-labelledby="monthly-expense-summary-label">
+                <table class="data-table">
+                    <caption id="monthly-expense-summary-label">Monthly Expense Summary</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">S. No.</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Planned Budget (₹)</th>
+                            <th scope="col">Actual Spent (₹)</th>
+                            <th scope="col">Difference (₹)</th>
+                            <th scope="col">Remarks / Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Food &amp; Snacks</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Travel</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>College / Study Material</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Online Subscriptions</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Other / Miscellaneous</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <h2>Monthly Budget Planner (Form Demo)</h2>
+            <p class="section-note">
+                This budget form is mainly to show different input types for my practical. In future
+                I can add JS to calculate and show totals automatically.
+            </p>
+
+            <form class="expense-form" action="#" method="post">
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="month">Month</label>
+                        <input type="month" id="month" name="month">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="total-budget">Total budget for the month (₹)</label>
+                        <input type="number" id="total-budget" name="total-budget" min="0" step="100">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="food-budget">Food &amp; snacks (₹)</label>
+                        <input type="number" id="food-budget" name="food-budget" min="0" step="50">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="travel-budget">Travel (₹)</label>
+                        <input type="number" id="travel-budget" name="travel-budget" min="0" step="50">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="study-budget">College &amp; study material (₹)</label>
+                        <input type="number" id="study-budget" name="study-budget" min="0" step="50">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="other-budget">Other / miscellaneous (₹)</label>
+                        <input type="number" id="other-budget" name="other-budget" min="0" step="50">
+                    </div>
+
+                    <div class="form-field form-field-full">
+                        <label for="saving-goal">Saving goal / notes</label>
+                        <textarea id="saving-goal" name="saving-goal" rows="3"
+                            placeholder="Example: Save ₹1000 this month by reducing outside food..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save Plan (Demo)</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Student Life Command Center. Created by Purab Jain, CSE student.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- fixed viewport: comma and no nested quotes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timetable planner — weekly class timetable and exam schedule for Student Life Command Center.">
+    <title>Timetable — Student Life Command Center</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <span class="logo-main">Student Life</span>
+            <span class="logo-sub">Command Center</span>
+        </div>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="timetable.html">Timetable</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="resources.html">Resources</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="hero">
+            <h1>Timetable Planner</h1>
+            <p>
+                Use these templates to organise your weekly class schedule and exam timetable.
+                You can fill them digitally or print them and write by hand.
+            </p>
+        </section>
+
+        <section class="page-section">
+            <h2>Weekly Class Timetable</h2>
+            <p class="section-note">
+                Simple weekly layout with 8 periods per day. I can just fill in my subjects and change it whenever the timetable updates.
+            </p>
+
+            <div class="table-wrapper" role="region" aria-labelledby="weekly-timetable-label">
+                <table class="timetable-table" aria-describedby="weekly-timetable-desc">
+                    <caption id="weekly-timetable-label">Weekly Class Timetable</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Day</th>
+                            <th scope="col">Period 1</th>
+                            <th scope="col">Period 2</th>
+                            <th scope="col">Period 3</th>
+                            <th scope="col">Period 4</th>
+                            <th scope="col">Period 5</th>
+                            <th scope="col">Period 6</th>
+                            <th scope="col">Period 7</th>
+                            <th scope="col">Period 8</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Monday</th>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tuesday</th>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Wednesday</th>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Thursday</th>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Friday</th>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Saturday</th>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="weekly-timetable-desc" class="visually-hidden">Blank timetable to fill with subject names and times.</p>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <h2>Exam Timetable</h2>
+            <p class="section-note">
+                I use this table to note all tests and exams in one place instead of asking “kab exam hai?” again and again.
+            </p>
+
+            <div class="table-wrapper" role="region" aria-labelledby="exam-timetable-label">
+                <table class="timetable-table" aria-describedby="exam-timetable-desc">
+                    <caption id="exam-timetable-label">Exam Timetable</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">S. No.</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Day</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Exam Type</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Room / Venue</th>
+                            <th scope="col">Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p id="exam-timetable-desc" class="visually-hidden">Table for planning exam dates, times and venues.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Student Life Command Center. Created by Purab Jain, CSE student.</p>
+    </footer>
+</body>
+</html>

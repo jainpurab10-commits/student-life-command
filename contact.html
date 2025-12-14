@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- fixed viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact page for Student Life Command Center — demo contact form showing form elements and layout.">
+    <title>Contact — Student Life Command Center</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <span class="logo-main">Student Life</span>
+            <span class="logo-sub">Command Center</span>
+        </div>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="timetable.html">Timetable</a>
+            <a href="assignments.html">Assignments</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="resources.html">Resources</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="hero">
+            <h1>Contact</h1>
+            <p>
+                This is a sample contact page for my project. The form below is just a demo
+                to show how a real contact form would look in this website.
+            </p>
+        </section>
+
+        <section class="page-section contact-layout">
+            <div class="contact-info">
+                <h2>Project Details</h2>
+                <p class="section-note">
+                    I built this for my web development practical using only HTML and CSS.
+                    Later I can connect this form to a backend or email service to make it real.
+                </p>
+
+                <ul>
+                    <li><strong>Project:</strong> Student Life Command Center</li>
+                    <li><strong>Type:</strong> Static academic planner website</li>
+                    <li><strong>Technologies:</strong> HTML5, CSS3 (no JavaScript)</li>
+                </ul>
+
+                <h3>How this form works</h3>
+                <p>
+                    In this static version, the form does not actually send emails. It is
+                    included to demonstrate proper use of form fields, labels and layout.
+                </p>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h2>Contact Form (Demo)</h2>
+                <p class="section-note">
+                    Filling this form is optional in this version &mdash; it is mainly to show inputs,
+                    labels and layout for the practical.
+                </p>
+
+                <form class="contact-form" action="#" method="post" aria-label="Contact form">
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Reason for contact">
+                        </div>
+
+                        <div class="form-field">
+                            <span class="field-label">Reason for contact</span>
+                            <div class="radio-group" role="radiogroup" aria-label="Reason for contact">
+                                <label><input type="radio" name="reason" value="feedback" checked> Feedback</label>
+                                <label><input type="radio" name="reason" value="suggestion"> Suggestion</label>
+                                <label><input type="radio" name="reason" value="issue"> Issue / Problem</label>
+                            </div>
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Write your message or feedback here..."></textarea>
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label>
+                                <input type="checkbox" name="reply-needed" value="yes">
+                                I would like a reply (in a real version of this website).
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Send Message (Demo)</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Student Life Command Center. Created by Purab Jain, CSE student.</p>
+    </footer>
+</body>
+</html>

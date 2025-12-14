@@ -1,0 +1,604 @@
+/* Reset-ish: keep it simple */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    background: #f5f5f5;
+    color: #111827;
+}
+
+/* Layout */
+
+.site-header {
+    background: #111827;
+    color: #f9fafb;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.logo-sub {
+    font-size: 1.1rem;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+
+.site-nav a:hover {
+    background: #1f2937;
+    border-color: #4b5563;
+}
+
+.page-content {
+    max-width: 1100px;
+    margin: 1.5rem auto 2rem;
+    padding: 0 1rem;
+}
+
+/* Hero section */
+
+.hero {
+    background: white;
+    padding: 1.75rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    color: #4b5563;
+}
+
+/* Cards */
+
+.quick-links {
+    margin-top: 1rem;
+}
+
+.quick-links h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 0.9rem;
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.card h3 {
+    margin-bottom: 0.35rem;
+    font-size: 1.05rem;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.12);
+}
+
+/* Footer */
+
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* Make nav stack on small screens */
+
+@media (max-width: 640px) {
+    .site-header {
+        align-items: flex-start;
+    }
+
+    .site-nav {
+        justify-content: flex-start;
+    }
+}
+
+
+
+/* Timetable-Table */
+
+/* Page sections */
+
+.page-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    margin-top: 1.25rem;
+}
+
+.page-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-note {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+}
+
+/* Tables */
+
+.table-wrapper {
+    overflow-x: auto; /* in case screen is small */
+    margin-top: 0.75rem;
+}
+
+.timetable-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    background: white;
+}
+
+.timetable-table caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #374151;
+}
+
+.timetable-table th,
+.timetable-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.45rem 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.timetable-table thead th {
+    background: #f3f4f6;
+    font-weight: 600;
+}
+
+.timetable-table tbody th {
+    background: #f9fafb;
+    font-weight: 600;
+    text-align: left;
+}
+
+.timetable-table tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+/* Optional: nicer look when printing */
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .site-header,
+    .site-footer,
+    .site-nav {
+        display: none;
+    }
+
+    .page-content {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .page-section,
+    .hero {
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
+/* ASSIGNMENT TRACKER */
+
+/* Generic data tables (for assignments, exams, etc.) */
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    background: white;
+}
+
+.data-table caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #374151;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.45rem 0.5rem;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.data-table thead th {
+    background: #f3f4f6;
+    font-weight: 600;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+/* Forms */
+
+
+.assignment-form,
+.expense-form,
+.contact-form {
+    margin-top: 0.75rem;
+}
+
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.form-field-full {
+    grid-column: 1 / -1;
+}
+
+.form-field label,
+.field-label {
+    font-weight: 500;
+    color: #374151;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: 0.45rem 0.55rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    font: inherit;
+    background: #f9fafb;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.3);
+    background: #ffffff;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.radio-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: #4f46e5;
+    color: #f9fafb;
+}
+
+.btn-primary:hover {
+    background: #4338ca;
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.btn-secondary:hover {
+    background: #d1d5db;
+}
+
+@media (max-width: 640px) {
+    .data-table {
+        min-width: 100%;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ATTENDANCE */
+/* Attendance tables */
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    background: white;
+}
+
+.attendance-table caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #374151;
+}
+
+.attendance-table th,
+.attendance-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.45rem 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.attendance-table thead th {
+    background: #f3f4f6;
+    font-weight: 600;
+}
+
+.attendance-table tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+.attendance-table tbody td:nth-child(3),
+.attendance-table tbody td:nth-child(4),
+.attendance-table tbody td:nth-child(5),
+.attendance-table tbody td:nth-child(6) {
+    /* numeric-ish columns */
+    text-align: center;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status-good {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-warning {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.status-critical {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+
+
+/* Resource list */
+
+.resource-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.resource-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+}
+
+.resource-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.resource-item p {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.resource-link {
+    align-self: center;
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+}
+
+/* Subject cards */
+
+.subject-resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 0.8rem;
+}
+
+.subject-card {
+    border-radius: 0.9rem;
+    padding: 0.85rem 1rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+}
+
+.subject-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.subject-card ul {
+    padding-left: 1.1rem;
+}
+
+.subject-card li {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+/* Embedded video */
+
+.embed-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.9rem;
+    margin-top: 0.75rem;
+}
+
+.embed-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* ABOUT */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.about-card {
+    padding: 0.9rem 1rem;
+    border-radius: 0.9rem;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    font-size: 0.9rem;
+}
+
+.about-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+
+
+
+/* Contact page */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+    gap: 1.25rem;
+}
+
+.contact-info h3 {
+    font-size: 1rem;
+    margin: 0.75rem 0 0.35rem;
+}
+
+.contact-info ul {
+    margin-top: 0.4rem;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+}
+
+.contact-form-wrapper h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
